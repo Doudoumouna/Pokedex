@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Pokedex</title>
+  </head>
+  <body onload="loadPokemon()">
+    <!--Eine Funktion "loadPokemon" wird beim Laden der Seite aufgerufen, aber es wurde noch nicht definiert. Sie können diese Funktion in Ihrem JavaScript-Code definieren, um Informationen über das Pokemon abzurufen und es auf Ihrer Seite anzuzeigen.-->
+    <header>
+      <h1><a href="#">Pokedex</a></h1>
+      <div class="input-search-container">
+        <input class="input-search-field" type="search" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Pokemon</a></li>
+          <li><a href="#">Über uns</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="begrüßung">
+      <h2>Willkommen in der Pokedex!</h2>
+      <p>Hier finden Sie Informationen über alle Pokemon.</p>
+    </main>
+    <div class="pokedex-container" id="pokedex-container">
+      <div
+        class="pokemon bg-grass"
+        onclick="seePokemon(1)"
+        id="pokemon1"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(123, 206, 82) 0px,
+            rgb(80, 162, 40) 50%
+          );
+          border: 3px solid rgb(52, 151, 4);
+        "
+      >
+        <div class="pokedex" id="pokedex1">
+          <h1 id="pokemon-name1">bulbasaur</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img1"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container1">
+          <div class="types"><b>grass</b></div>
+
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon bg-grass"
+        onclick="seePokemon(2)"
+        id="pokemon2"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(123, 206, 82) 0px,
+            rgb(80, 162, 40) 50%
+          );
+          border: 3px solid rgb(52, 151, 4);
+        "
+      >
+        <div class="pokedex" id="pokedex2">
+          <h1 id="pokemon-name2">ivysaur</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img2"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container2">
+          <div class="types"><b>grass</b></div>
+
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon bg-grass"
+        onclick="seePokemon(3)"
+        id="pokemon3"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(123, 206, 82) 0px,
+            rgb(80, 162, 40) 50%
+          );
+          border: 3px solid rgb(52, 151, 4);
+        "
+      >
+        <div class="pokedex" id="pokedex3">
+          <h1 id="pokemon-name3">venusaur</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img3"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container3">
+          <div class="types"><b>grass</b></div>
+
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(4)"
+        id="pokemon4"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(154, 27, 1);
+        "
+      >
+        <div class="pokedex" id="pokedex4">
+          <h1 id="pokemon-name4">charmander</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img4"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container4">
+          <div class="types"><b>fire</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(5)"
+        id="pokemon5"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(154, 27, 1);
+        "
+      >
+        <div class="pokedex" id="pokedex5">
+          <h1 id="pokemon-name5">charmeleon</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img5"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container5">
+          <div class="types"><b>fire</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(6)"
+        id="pokemon6"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(154, 27, 1);
+        "
+      >
+        <div class="pokedex" id="pokedex6">
+          <h1 id="pokemon-name6">charizard</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img6"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container6">
+          <div class="types"><b>fire</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(7)"
+        id="pokemon7"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(57, 156, 255) 0px,
+            rgb(17, 114, 212) 50%
+          );
+          border: 3px solid rgb(0, 83, 167);
+        "
+      >
+        <div class="pokedex" id="pokedex7">
+          <h1 id="pokemon-name7">squirtle</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img7"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container7">
+          <div class="types"><b>water</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(8)"
+        id="pokemon8"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(57, 156, 255) 0px,
+            rgb(17, 114, 212) 50%
+          );
+          border: 3px solid rgb(0, 83, 167);
+        "
+      >
+        <div class="pokedex" id="pokedex8">
+          <h1 id="pokemon-name8">wartortle</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img8"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container8">
+          <div class="types"><b>water</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(9)"
+        id="pokemon9"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(57, 156, 255) 0px,
+            rgb(17, 114, 212) 50%
+          );
+          border: 3px solid rgb(0, 83, 167);
+        "
+      >
+        <div class="pokedex" id="pokedex9">
+          <h1 id="pokemon-name9">blastoise</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img9"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container9">
+          <div class="types"><b>water</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(10)"
+        id="pokemon10"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 189, 33) 0px,
+            rgb(146, 161, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex10">
+          <h1 id="pokemon-name10">caterpie</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img10"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container10">
+          <div class="types"><b>bug</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(11)"
+        id="pokemon11"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 189, 33) 0px,
+            rgb(146, 161, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex11">
+          <h1 id="pokemon-name11">metapod</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img11"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/11.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container11">
+          <div class="types"><b>bug</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(12)"
+        id="pokemon12"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 189, 33) 0px,
+            rgb(146, 161, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex12">
+          <h1 id="pokemon-name12">butterfree</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img12"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/12.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container12">
+          <div class="types"><b>bug</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(13)"
+        id="pokemon13"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 189, 33) 0px,
+            rgb(146, 161, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex13">
+          <h1 id="pokemon-name13">weedle</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img13"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/13.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container13">
+          <div class="types"><b>bug</b></div>
+
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(14)"
+        id="pokemon14"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 165, 148) 0px,
+            rgb(136, 122, 93) 50%
+          );
+          border: 3px solid rgb(105, 95, 74);
+        "
+      >
+        <div class="pokedex" id="pokedex14">
+          <h1 id="pokemon-name14">kakuna</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img14"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/14.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container14">
+          <div class="types"><b>bug</b></div>
+
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(15)"
+        id="pokemon15"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 165, 148) 0px,
+            rgb(136, 122, 93) 50%
+          );
+          border: 3px solid rgb(105, 95, 74);
+        "
+      >
+        <div class="pokedex" id="pokedex15">
+          <h1 id="pokemon-name15">beedrill</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img15"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/15.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container15">
+          <div class="types"><b>bug</b></div>
+
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(16)"
+        id="pokemon16"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 165, 148) 0px,
+            rgb(136, 122, 93) 50%
+          );
+          border: 3px solid rgb(105, 95, 74);
+        "
+      >
+        <div class="pokedex" id="pokedex16">
+          <h1 id="pokemon-name16">pidgey</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img16"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/16.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container16">
+          <div class="types"><b>normal</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(17)"
+        id="pokemon17"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 165, 148) 0px,
+            rgb(136, 122, 93) 50%
+          );
+          border: 3px solid rgb(105, 95, 74);
+        "
+      >
+        <div class="pokedex" id="pokedex17">
+          <h1 id="pokemon-name17">pidgeotto</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img17"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container17">
+          <div class="types"><b>normal</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(18)"
+        id="pokemon18"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 165, 148) 0px,
+            rgb(136, 122, 93) 50%
+          );
+          border: 3px solid rgb(105, 95, 74);
+        "
+      >
+        <div class="pokedex" id="pokedex18">
+          <h1 id="pokemon-name18">pidgeot</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img18"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/18.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container18">
+          <div class="types"><b>normal</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(19)"
+        id="pokemon19"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(173, 165, 148) 0px,
+            rgb(136, 122, 93) 50%
+          );
+          border: 3px solid rgb(105, 95, 74);
+        "
+      >
+        <div class="pokedex" id="pokedex19">
+          <h1 id="pokemon-name19">rattata</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img19"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/19.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container19">
+          <div class="types"><b>normal</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(20)"
+        id="pokemon20"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(181, 90, 165) 0px,
+            rgb(132, 49, 117) 50%
+          );
+          border: 3px solid rgb(103, 39, 92);
+        "
+      >
+        <div class="pokedex" id="pokedex20">
+          <h1 id="pokemon-name20">raticate</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img20"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/20.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container20">
+          <div class="types"><b>normal</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(21)"
+        id="pokemon21"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(181, 90, 165) 0px,
+            rgb(132, 49, 117) 50%
+          );
+          border: 3px solid rgb(103, 39, 92);
+        "
+      >
+        <div class="pokedex" id="pokedex21">
+          <h1 id="pokemon-name21">spearow</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img21"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/21.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container21">
+          <div class="types"><b>normal</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(22)"
+        id="pokemon22"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(181, 90, 165) 0px,
+            rgb(132, 49, 117) 50%
+          );
+          border: 3px solid rgb(103, 39, 92);
+        "
+      >
+        <div class="pokedex" id="pokedex22">
+          <h1 id="pokemon-name22">fearow</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img22"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/22.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container22">
+          <div class="types"><b>normal</b></div>
+
+          <div class="types"><b>flying</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(23)"
+        id="pokemon23"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(181, 90, 165) 0px,
+            rgb(132, 49, 117) 50%
+          );
+          border: 3px solid rgb(103, 39, 92);
+        "
+      >
+        <div class="pokedex" id="pokedex23">
+          <h1 id="pokemon-name23">ekans</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img23"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container23">
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(24)"
+        id="pokemon24"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(181, 90, 165) 0px,
+            rgb(132, 49, 117) 50%
+          );
+          border: 3px solid rgb(103, 39, 92);
+        "
+      >
+        <div class="pokedex" id="pokedex24">
+          <h1 id="pokemon-name24">arbok</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img24"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/24.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container24">
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(25)"
+        id="pokemon25"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(189, 138, 5) 0px,
+            rgb(170, 150, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex25">
+          <h1 id="pokemon-name25">pikachu</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img25"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container25">
+          <div class="types"><b>electric</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(26)"
+        id="pokemon26"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(189, 138, 5) 0px,
+            rgb(170, 150, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex26">
+          <h1 id="pokemon-name26">raichu</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img26"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/26.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container26">
+          <div class="types"><b>electric</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(27)"
+        id="pokemon27"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(189, 138, 5) 0px,
+            rgb(170, 150, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex27">
+          <h1 id="pokemon-name27">sandshrew</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img27"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/27.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container27">
+          <div class="types"><b>ground</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(28)"
+        id="pokemon28"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(189, 138, 5) 0px,
+            rgb(170, 150, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex28">
+          <h1 id="pokemon-name28">sandslash</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img28"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/28.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container28">
+          <div class="types"><b>ground</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(29)"
+        id="pokemon29"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(189, 138, 5) 0px,
+            rgb(170, 150, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex29">
+          <h1 id="pokemon-name29">nidoran-f</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img29"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/29.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container29">
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(30)"
+        id="pokemon30"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(189, 138, 5) 0px,
+            rgb(170, 150, 18) 50%
+          );
+          border: 3px solid rgb(130, 143, 17);
+        "
+      >
+        <div class="pokedex" id="pokedex30">
+          <h1 id="pokemon-name30">nidorina</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img30"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/30.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container30">
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(31)"
+        id="pokemon31"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(247, 82, 49);
+        "
+      >
+        <div class="pokedex" id="pokedex31">
+          <h1 id="pokemon-name31">nidoqueen</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img31"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/31.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container31">
+          <div class="types"><b>poison</b></div>
+
+          <div class="types"><b>ground</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(32)"
+        id="pokemon32"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(247, 82, 49);
+        "
+      >
+        <div class="pokedex" id="pokedex32">
+          <h1 id="pokemon-name32">nidoran-m</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img32"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/32.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container32">
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(33)"
+        id="pokemon33"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(247, 82, 49);
+        "
+      >
+        <div class="pokedex" id="pokedex33">
+          <h1 id="pokemon-name33">nidorino</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img33"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/33.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container33">
+          <div class="types"><b>poison</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(34)"
+        id="pokemon34"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(247, 82, 49);
+        "
+      >
+        <div class="pokedex" id="pokedex34">
+          <h1 id="pokemon-name34">nidoking</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img34"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/34.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container34">
+          <div class="types"><b>poison</b></div>
+
+          <div class="types"><b>ground</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(35)"
+        id="pokemon35"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(247, 82, 49);
+        "
+      >
+        <div class="pokedex" id="pokedex35">
+          <h1 id="pokemon-name35">clefairy</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img35"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container35">
+          <div class="types"><b>fairy</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(36)"
+        id="pokemon36"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(247, 82, 49) 0px,
+            rgb(193, 59, 32) 50%
+          );
+          border: 3px solid rgb(247, 82, 49);
+        "
+      >
+        <div class="pokedex" id="pokedex36">
+          <h1 id="pokemon-name36">clefable</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img36"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container36">
+          <div class="types"><b>fairy</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(37)"
+        id="pokemon37"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(199, 88, 199) 0px,
+            rgb(163, 59, 160) 50%
+          );
+          border: 3px solid rgb(199, 88, 199);
+        "
+      >
+        <div class="pokedex" id="pokedex37">
+          <h1 id="pokemon-name37">vulpix</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img37"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/37.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container37">
+          <div class="types"><b>fire</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(38)"
+        id="pokemon38"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(199, 88, 199) 0px,
+            rgb(163, 59, 160) 50%
+          );
+          border: 3px solid rgb(199, 88, 199);
+        "
+      >
+        <div class="pokedex" id="pokedex38">
+          <h1 id="pokemon-name38">ninetales</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img38"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/38.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container38">
+          <div class="types"><b>fire</b></div>
+        </div>
+      </div>
+
+      <div
+        class="pokemon"
+        onclick="seePokemon(39)"
+        id="pokemon39"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(199, 88, 199) 0px,
+            rgb(163, 59, 160) 50%
+          );
+          border: 3px solid rgb(199, 88, 199);
+        "
+      >
+        <div class="pokedex" id="pokedex39">
+          <h1 id="pokemon-name39">jigglypuff</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img39"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container39">
+          <div class="types"><b>normal</b></div>
+
+          <div class="types"><b>fairy</b></div>
+        </div>
+      </div>
+
+      <div
+        class="pokemon"
+        onclick="seePokemon(40)"
+        id="pokemon40"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(199, 88, 199) 0px,
+            rgb(163, 59, 160) 50%
+          );
+          border: 3px solid rgb(199, 88, 199);
+        "
+      >
+        <div class="pokedex" id="pokedex40">
+          <h1 id="pokemon-name40">ditto</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img40"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container40">
+          <div class="types"><b>normal</b></div>
+        </div>
+      </div>
+
+      <div
+        class="pokemon"
+        onclick="seePokemon(41)"
+        id="pokemon41"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(199, 88, 199) 0px,
+            rgb(163, 59, 160) 50%
+          );
+          border: 3px solid rgb(199, 88, 199);
+        "
+      >
+        <div class="pokedex" id="pokedex41">
+          <h1 id="pokemon-name41">koraidon</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img41"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/41.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container41">
+          <div class="types"><b>fighting</b></div>
+        </div>
+      </div>
+      <div
+        class="pokemon"
+        onclick="seePokemon(42)"
+        id="pokemon42"
+        style="
+          width: 225px;
+          height: 150px;
+          margin: 20px;
+          box-shadow: rgb(120, 120, 120) 10px 10px 7px;
+          background: linear-gradient(
+            to right bottom,
+            rgb(199, 88, 199) 0px,
+            rgb(163, 59, 160) 50%
+          );
+          border: 3px solid rgb(199, 88, 199);
+        "
+      >
+        <div class="pokedex" id="pokedex42">
+          <h1 id="pokemon-name42">miraidon</h1>
+        </div>
+        <img
+          class="poke-img"
+          id="poke-img42"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/42.png"
+          alt=""
+        />
+        <div class="info-container" id="info-container42">
+          <div class="types"><b>electric</b></div>
+        </div>
+      </div>
+    </div>
+    <button class="load-more-button" onclick="loadMore()">Load more</button>
+    <button
+      id="btnBack"
+      class="btn btn-outline-info m-5 dNone"
+      onclick="window.location.reload()"
+    >
+      <b>Back</b>
+    </button>
+    <div
+      onclick="closePopup()"
+      id="popup-container"
+      class="popup-container display-none"
+    >
+      <div class="popup">
+        <div class="popup-top">
+          <img
+            id="poke-img-popup"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/15.png"
+            alt=""
+          />
+          <h2 id="popup-name">beedrill</h2>
+        </div>
+        <div class="popup-bottom">
+          <div class="info-in-popup" id="abilities">
+            <b>Abilities:</b> swarm | sniper |
+          </div>
+          <div class="info-in-popup" id="types">
+            <b>Types:</b>
+            bug | poison |
+          </div>
+          <div class="info-in-popup" id="weight"><b>Weight:</b> 295</div>
+          <div class="info-in-popup" id="exp"><b>Base-Experience:</b> 178</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Pokedex</p>
+    </footer>
+  </body>
+</html>
